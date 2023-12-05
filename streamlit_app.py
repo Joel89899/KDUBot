@@ -59,3 +59,20 @@ if st.session_state.messages[-1]["role"] != "assistant":
             st.write(response.response)
             message = {"role": "assistant", "content": response.response}
             st.session_state.messages.append(message) # Add response to message history
+
+
+from trubrics.integrations.streamlit import FeedbackCollector
+
+collector = FeedbackCollector(
+    project="default",
+    email=st.secrets.TRUBRICS_EMAIL,
+    password=st.secrets.TRUBRICS_PASSWORD,
+)
+
+collector.st_feedback(
+    component="default",
+    feedback_type="thumbs",
+    model="gpt-3.5-turbo",
+    prompt_id=None,  # see prompts to log prompts and model generations
+    open_feedback_label='[Optional] Provide additional feedback'
+)
