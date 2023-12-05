@@ -74,3 +74,5 @@ if st.session_state.messages[-1]["role"] != "assistant":
                 prompt_id=None,  # see prompts to log prompts and model generations
                 open_feedback_label='[Optional] Provide additional feedback'
             )
+            # Submit collected feedback
+            collector.submit()
