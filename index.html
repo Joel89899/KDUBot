@@ -1,29 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My App</title>
-
-    <style>
-    body {
-      margin: 0;
-    }
-
-    iframe {
-      display: block;
-      background: #000;
-      border: none;
-      height: 100vh;
-      width: 100vw;
-    }
-    </style>
-
-  </head>
-  <body>
-    <iframe src="https://kdubot.streamlit.app/">
-        Your browser doesn't support iframes
+ <!DOCTYPE html>
+    <html>
+    <head>
+    	<title>Your app name</title>
+    	<style type="text/css">
+    		html {
+    			overflow: auto;
+    		}  		
+    		html,
+    		body,
+    		div,
+    		iframe {
+    			margin: 0px;
+    			padding: 0px;
+    			height: 100%;
+    			border: none;
+    		}	
+    		iframe {
+    			display: block;
+    			width: 100%;
+    			border: none;
+    			overflow-y: auto;
+    			overflow-x: hidden;
+    		}
+    	</style>
+    </head>
+    <body>
+    	<iframe src="https://kdubot.streamlit.app/"
+    			frameborder="0"
+    			marginheight="0"
+    			marginwidth="0"
+    			width="100%"
+    			height="100%"
+    			scrolling="auto">
     </iframe>
-  </body>
-</html>
+    </body>
+    </html>
